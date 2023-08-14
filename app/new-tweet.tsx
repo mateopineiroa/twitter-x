@@ -10,7 +10,7 @@ export default function NewTweet() {
     const {
       data: { user },
     } = await supabase.auth.getUser();
-    if (user) {
+    if (user && title) {
       await supabase.from("tweets").insert({ title, user_id: user.id });
       redirect("/");
     }

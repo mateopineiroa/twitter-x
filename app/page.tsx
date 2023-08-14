@@ -54,8 +54,8 @@ export default async function Home() {
     },
   } = session;
   return (
-    <>
-      <header className="flex p-6 px-10 justify-between">
+    <main className="flex flex-col items-center">
+      <header className="flex w-full p-6 px-10 justify-between">
         <Image
           src="/Subject.png"
           alt="twitnt"
@@ -68,8 +68,8 @@ export default async function Home() {
         <h1 className="text-xl select-none">Home</h1>
         <AuthButtonServer />
       </header>
-      <div className="h-[0.0625rem] bg-gray-700" />
-      <div className="flex flex-col gap-4 p-4">
+      <div className="h-[0.0625rem] w-full bg-gray-700 " />
+      <div className="flex flex-col w-full gap-4 p-4 max-w-6xl">
         <div className="flex gap-2 ">
           <Image
             src={avatar_url}
@@ -85,6 +85,6 @@ export default async function Home() {
           <Tweets tweets={tweets} />
         </div>
       </div>
-    </>
+    </main>
   );
 }
