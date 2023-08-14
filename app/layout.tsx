@@ -5,6 +5,7 @@ import AuthButtonServer from "./auth-button-server";
 
 const inter = Inter({ subsets: ["latin"] });
 
+/* the next line fixes the error 'DynamicServerError: Dynamic server usage: cookies' */
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
